@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2|Liu+Jian+Mao+Cao&display=swap');
+
+body {
+    background: rgba(0, 0, 0, .9); /* Color de Fondo*/
+    margin: 0; /* Margen */
+    color: #FFF; /* Color de texto*/
+    font-family: 'Baloo Da 2', cursive; /* ... de Google Fonts */
+}
+
+.header::after { /* Post-carga */
+    content: '';
+    /* Largo y ancho de la pantalla */
+    height: 100vh;
+    width: 100%;
+    /* Fondo */
+    background-image: url('../img/fastfood.jpg');
+    background-size: cover; /* Cubre toda la imagen */
+    background-repeat: no-repeat; /* Que no se repita */
+    display: block; /* Para que sea visible en bloque */
+    /* Efecto */
+    /* filter: blur(1px);
+    -webkit-filter: blur(10px); */
+    transition: all 1000ms;
+}
+
+.header:hover::after { /* con la rata toda adentro */
+    filter: blur(8px);
+    -webkit-filter: blur(8px); /* crossbrowser */
+}
+
+.header:hover .header-content { /* con la rata entrando */
+    filter: blur(0px);
+    -webkit-filter: blur(0px); /* crossbrowser */
+}
+
+.header-content {
+    position: absolute; /* Flotante */
+    z-index: 1; /* Pone adelante */
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -165px;
+    text-align: center;
+    /* Ancho */
+    width: 300px;
+    transition: all 1000ms;
+}
+
+.header-content .logo {
+    height: 200px;
+    width: 200px;
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.text {
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    overflow: hidden; /* ¿Qué es? */
+    padding: 4rem 1rem;
+}
+
+.grid-3 {
+    display: grid; /* Con esto, puede dividirse el contenido */
+    grid-template-columns: repeat(3, 1fr); /* Dividimos en 3 columnas (1fr 1fr 1fr) */
+    grid-gap: 20px;
+}
+
+.grid-2 {
+    display: grid; /* Con esto, puede dividirse el contenido */
+    grid-template-columns: repeat(2, 1fr); /* Dividimos en 3 columnas (1fr 1fr 1fr) */
+    grid-gap: 20px;
+}
+
+.text-center {
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light {
+    background: #FFF;
+    color: #333;
+}
+
+.bg-dark {
+    background: #2F3542;
+    color: #222;
+}
+
+.services {
+    padding: 2rem 0;
+}
+
+footer {
+    padding: 2.2rem;
+}
+
+footer p {
+    margin: 0;
+}
